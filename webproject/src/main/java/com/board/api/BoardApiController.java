@@ -66,9 +66,7 @@ public class BoardApiController {
     }
 
 
-    // 할 일 삭제 요청
-    // URI : /api/todos/3 : DELETE
-    // => 3번 할 일을 삭제 후 삭제된 이후 갱신된 할일 목록 리턴
+    // 글 삭제 요청
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable String id, @AuthenticationPrincipal String userId) {
 
@@ -83,7 +81,7 @@ public class BoardApiController {
 
     }
 
-    // 할일 수정 요청
+    // 글 수정 요청
     @PutMapping
     public ResponseEntity<?> update(@RequestBody Board board, @AuthenticationPrincipal String userId) {
 

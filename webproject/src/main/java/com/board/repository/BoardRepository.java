@@ -8,6 +8,7 @@ import java.util.List;
 @Mapper
 public interface BoardRepository {
 
+
     // 글 생성 기능
     boolean save(Board board);
 
