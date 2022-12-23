@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.ibatis.TestRepository">
+
+
+    <insert id="save">
+        INSERT INTO TBL_TEST
+            (id, username, age)
+        VALUES
+            (#{id}, #{username}, #{age})
+    </insert>
+
+
+    <update id="modify">
+        UPDATE TBL_TEST
+        SET username=#{username}, age=#{age}
+        WHERE id=#{id}
+    </update>
+
+
+    <delete id="remove">
+        DELETE FROM TBL_TEST
+        WHERE id=#{id}
+    </delete>
+
+
+    <select id="findAll" resultType="com.ibatis.TestEntity">
+        SELECT id, username, age
+        FROM TBL_TEST
+        ORDER BY regDate
+    </select>
+</mapper>
