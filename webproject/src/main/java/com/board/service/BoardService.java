@@ -49,7 +49,7 @@ public class BoardService {
 
 
 
-    public Board findOneServ(String id) {
+    public BoardDTO findOneServ(String id) {
 
         Board board = repository.findOne(id);
         log.info("findOneServ return data - {}", board);
